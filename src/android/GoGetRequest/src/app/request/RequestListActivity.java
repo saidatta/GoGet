@@ -20,8 +20,7 @@ public class RequestListActivity extends Activity implements NewItemFragment.OnN
       
     // Get references to the Fragments
     FragmentManager fm = getFragmentManager();
-    RequestListFragment rListFragment = 
-      (RequestListFragment)fm.findFragmentById(R.id.RequestListFragment);
+  //  RequestListFragment rListFragment =     (RequestListFragment)fm.findFragmentById(R.id.RequestListFragment);
      
     // Create the array list of to do items
     requestItems = new ArrayList<RequestItem>();
@@ -31,7 +30,8 @@ public class RequestListActivity extends Activity implements NewItemFragment.OnN
     aa = new RequestItemAdapter(this, resID, requestItems);
      
     // Bind the array adapter to the ListView.
-    rListFragment.setListAdapter(aa);
+//    rListFragment.setListAdapter(aa);
+    
   }
   
   public void onNewItemAdded(String newItem) {

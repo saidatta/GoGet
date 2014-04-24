@@ -3,4 +3,9 @@
   <string name="app_name">Request List</string>
   <string name="addItemHint">New Request Item</string>
   <string name="addItemContentDescription">New Request Item</string>
+  <string name="btn_createRequest">Create a Request</string>
+  <string name="btn_exit">Exit</string>
+  <string name="btn_viewRequests"> View Requests</string>
+  
+  
 </resources>

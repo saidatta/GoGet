@@ -26,31 +26,31 @@ public class RequestItemAdapter extends ArrayAdapter<RequestItem> {
 
   @Override
   public View getView(int position, View convertView, ViewGroup parent) {
-    LinearLayout todoView;
+    LinearLayout reqView;
 
     RequestItem item = getItem(position);
 
-    String taskString = item.getTask();
+    String taskString = item.getItem();
     Date createdDate = item.getCreated();
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
     String dateString = sdf.format(createdDate);
 
     if (convertView == null) {
-      todoView = new LinearLayout(getContext());
+    	reqView = new LinearLayout(getContext());
       String inflater = Context.LAYOUT_INFLATER_SERVICE;
       LayoutInflater li;
       li = (LayoutInflater)getContext().getSystemService(inflater);
-      li.inflate(resource, todoView, true);
+      li.inflate(resource, reqView, true);
     } else {
-      todoView = (LinearLayout) convertView;
+    	reqView = (LinearLayout) convertView;
     }
 
-    TextView dateView = (TextView)todoView.findViewById(R.id.rowDate);
-    TextView taskView = (TextView)todoView.findViewById(R.id.row);
+    TextView dateView = (TextView)reqView.findViewById(R.id.rowDate);
+    TextView taskView = (TextView)reqView.findViewById(R.id.row);
 
     dateView.setText(dateString);
     taskView.setText(taskString);
 
-    return todoView;
+    return reqView;
   }
 }

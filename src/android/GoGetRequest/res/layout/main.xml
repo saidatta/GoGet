@@ -3,14 +3,20 @@
   android:orientation="vertical"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
-  <fragment android:name="app.request.NewItemFragment"
-    android:id="@+id/NewItemFragment"
-    android:layout_width="match_parent" 
-    android:layout_height="wrap_content" 
-  />
-  <fragment android:name="app.request.RequestListFragment"
-    android:id="@+id/RequestListFragment"
-    android:layout_width="match_parent" 
-    android:layout_height="wrap_content" 
-  />
+<Button android:id="@+id/bNewRequest"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:padding="5px"
+			android:text="@string/btn_createRequest" />
+<Button android:id="@+id/bViewRequest"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5px"
+    android:text="@string/btn_viewRequests"/>
+	<Button android:id="@+id/bExit"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:padding="5px"
+			android:text="@string/btn_exit" />
+	
 </LinearLayout>
