@@ -6,6 +6,9 @@
   <string name="btn_createRequest">Create a Request</string>
   <string name="btn_exit">Exit</string>
   <string name="btn_viewRequests"> View Requests</string>
-  
+   <string name="name"> Name</string>
+  <string name="address"> Address</string>
+  <string name="price"> Price</string>
+  <string name="item_name"> Item Name</string>
   
 </resources>
