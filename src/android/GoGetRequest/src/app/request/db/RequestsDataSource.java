@@ -42,20 +42,20 @@ public class RequestsDataSource {
 				allColumns, GoGetSQLiteHelper.COLUMN_ID + " = " + insertId, null,
 				null, null, null);
 		cursor.moveToFirst();
-		Request newComment = cursorToRequest(cursor);
+		Request newRequest = cursorToRequest(cursor);
 
-		// Log the comment stored
+		// Log the request stored
 		Log.d(TAG, "request = " + cursorToRequest(cursor).toString()
 				+ " insert ID = " + insertId);
 
 		cursor.close();
-		return newComment;
+		return newRequest;
 	}
 
 	public void deleteRequest(Request req) {
 		long id = req.getId();
-		Log.d(TAG, "delete comment = " + id);
-		System.out.println("Comment deleted with id: " + id);
+		Log.d(TAG, "delete request = " + id);
+		System.out.println("Request deleted with id: " + id);
 		database.delete(GoGetSQLiteHelper.TABLE_REQUESTS, GoGetSQLiteHelper.COLUMN_ID
 				+ " = " + id, null);
 	}
@@ -67,27 +67,27 @@ public class RequestsDataSource {
 	}
 	
 	public List<Request> getAllRequests() {
-		List<Request> comments = new ArrayList<Request>();
+		List<Request> requests = new ArrayList<Request>();
 
 		Cursor cursor = database.query(GoGetSQLiteHelper.TABLE_REQUESTS,
 				allColumns, null, null, null, null, null);
 
 		cursor.moveToFirst();
 		while (!cursor.isAfterLast()) {
-			Request comment = cursorToRequest(cursor);
-			Log.d(TAG, "get comment = " + cursorToRequest(cursor).toString());
-			comments.add(comment);
+			Request req = cursorToRequest(cursor);
+			Log.d(TAG, "get request = " + cursorToRequest(cursor).toString());
+			requests.add(req);
 			cursor.moveToNext();
 		}
 		// Make sure to close the cursor
 		cursor.close();
-		return comments;
+		return requests;
 	}
 
 	private Request cursorToRequest(Cursor cursor) {
-		Request comment = new Request();
-		comment.setId(cursor.getLong(0));
-		comment.setComment(cursor.getString(1));
-		return comment;
+		Request req = new Request();
+		req.setId(cursor.getLong(0));
+		req.setRequest(cursor.getString(1));
+		return req;
 	}
 }
