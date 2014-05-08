@@ -9,6 +9,7 @@ public class RequestItem {
   private Date created;
   private String itemname;
   private int item_price;
+  private String address;
 
   public String getOwner() {
     return owner;
@@ -42,6 +43,12 @@ public class RequestItem {
     item_price = price;
   }
   
+  public RequestItem(String Name, String addr, String iname,int price) {
+	  owner = Name;
+	  address = addr;
+	  itemname = iname;
+	  item_price = price;
+  }
 
   @Override
   public String toString() {
