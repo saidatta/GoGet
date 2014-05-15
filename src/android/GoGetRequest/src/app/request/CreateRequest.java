@@ -35,7 +35,8 @@ public class CreateRequest extends Activity {
                 String addr = inputAddr.getText().toString();
                 String iName = inputiName.getText().toString();
                 int price = Integer.parseInt(inputPrice.getText().toString());
-				datasource.createRequest(new RequestItem(name,addr,iName,price));
+                RequestItem ri = new RequestItem(name,addr,iName,price);
+				datasource.createRequest(ri);
 				
 			}
 		});
