@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class MainMenu extends Activity implements OnClickListener{
 	 private ArrayList<RequestItem> requestItems = new ArrayList<RequestItem>(); // requested Items
-	 //private RequestItemAdapter aa;
+	  private RequestItemAdapter aa;
 
 	protected void onCreate(Bundle savedInstanceState){
 		  super.onCreate(savedInstanceState);
