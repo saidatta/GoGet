@@ -31,7 +31,11 @@ public class CreateRequest extends Activity {
 		btnNextScreen.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				//Starting a new Intent
-				datasource.createRequest(new RequestItem(inputName.toString(),inputAddr.toString(),inputiName.toString(),Integer.parseInt(inputPrice.toString())));
+                String name = inputName.getText().toString();
+                String addr = inputAddr.getText().toString();
+                String iName = inputiName.getText().toString();
+                int price = Integer.parseInt(inputPrice.getText().toString());
+				datasource.createRequest(new RequestItem(name,addr,iName,price));
 				
 			}
 		});
