@@ -81,6 +81,11 @@ public class CreateRequest extends Activity {
 			if(ok)
 			{
 				RequestMessages.ShowRequestAddedAlert(this);
+                //clear all EditTexts:
+                inputName.setText("");
+                inputAddr.setText("");
+                inputiName.setText("");
+                inputPrice.setText("");
 			//	numberOfRequests.setText("Number of Requests "+String.valueOf(dbHelper.getRequestsCount()));
 			}
 		}
@@ -102,7 +107,7 @@ public class CreateRequest extends Activity {
 		diag.setTitle("Add new Request");
 		TextView txt=new TextView(this);
 		txt.setText("Employee Added Successfully");
-		diag.setContentView(txt);
+        diag.setContentView(txt);
 		diag.show();
 		try {
 			diag.wait(1000);
