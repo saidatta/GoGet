@@ -47,12 +47,10 @@ public class CreateRequest extends Activity {
 		super.onStart();
 		dbHelper=new GoGetSQLiteHelper(this);
 		numberOfRequests.setText(numberOfRequests.getText()+String.valueOf(dbHelper.getRequestsCount()));
-		
-
 		}
 		catch(Exception ex)
 		{
-			System.out.println(ex.printStackTrace());
+			ex.printStackTrace();
 			CatchError(ex.toString());
 		}
 	}
@@ -68,7 +66,7 @@ public class CreateRequest extends Activity {
 		
 			String addr = inputAddr.getText().toString();
 			String item_name = inputiName.getText().toString();
-			RequestItem reqItem=new RequestItem(name,addr,item_name,price);
+			RequestItem reqItem = new RequestItem(name,addr,item_name,price);
 			
 			dbHelper.AddRequest(reqItem);
 			
