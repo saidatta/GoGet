@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Dialog;
 //import android.content.Intent;
 //import android.database.Cursor;
+import android.app.DialogFragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.location.*;
 import android.os.Bundle;
@@ -29,11 +31,11 @@ public class CreateRequest extends Activity {
 	EditText inputPrice;
     EditText inputStore;
     EditText inputComments;
+    EditText inputTime;
 	TextView numberOfRequests;
 	RequestsDataSource datasource;
 	GoGetSQLiteHelper dbHelper;
     LocationManager locManager;
-    List<Address> addrs;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class CreateRequest extends Activity {
 		inputPrice = (EditText) findViewById(R.id.price);
         inputStore = (EditText) findViewById(R.id.store_name);
         inputComments = (EditText) findViewById(R.id.comments);
+        inputTime = (EditText) findViewById(R.id.text_time);
 		//Button btnNextScreen = (Button) findViewById(R.id.submit);
 		
 	
@@ -100,6 +103,7 @@ public class CreateRequest extends Activity {
                 inputPrice.setText("");
                 inputStore.setText("");
                 inputComments.setText("");
+                inputTime.setText("");
 			//	numberOfRequests.setText("Number of Requests "+String.valueOf(dbHelper.getRequestsCount()));
 			}
 		}
@@ -121,6 +125,11 @@ public class CreateRequest extends Activity {
             ex.printStackTrace();
         }
 
+    }
+
+    public void showTimePickerDialog(View v) {
+        DialogFragment newFragment = new TimePickerFragment();
+        newFragment.show(getFragmentManager(), "timePicker");
     }
 
     private Location getLoc() {
@@ -188,5 +197,6 @@ public class CreateRequest extends Activity {
 		diag.notify();
 		diag.dismiss();
 	}
-	
+
+
 }
