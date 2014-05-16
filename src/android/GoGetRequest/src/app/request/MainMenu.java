@@ -16,7 +16,8 @@ public class MainMenu extends Activity implements OnClickListener{
 	        setContentView(R.layout.main);
 	        Button newRequest = (Button)findViewById(R.id.bNewRequest);
 	        Button exit = (Button)findViewById(R.id.bExit);
-	    
+	        Button viewRequests = (Button)findViewById(R.id.bViewRequest);
+            viewRequests.setOnClickListener(this);
 	        newRequest.setOnClickListener(this);
 	        exit.setOnClickListener(this);
 	}
@@ -27,15 +28,20 @@ public class MainMenu extends Activity implements OnClickListener{
 		switch(myview.getId()){
 		case R.id.bNewRequest:
 		{ 	Intent i = new Intent(getApplicationContext(), CreateRequest.class);
-			startActivity(i);   } break;
+			startActivity(i);
+            break;
+        }
 		case R.id.bViewRequest: 
-		{Intent i = new Intent(getApplicationContext(), ViewRequest.class);
-		startActivity(i);  
-					
-				}break;
-		case R.id.bExit: finish(); break;
+		{
+            Intent i = new Intent(getApplicationContext(), ViewRequest.class);
+		    startActivity(i);
+            break;
 		}
-		
+		case R.id.bExit:
+            finish();
+            break;
+		}
+
 	}
 
 }
