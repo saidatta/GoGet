@@ -26,6 +26,26 @@ public class RequestItem {
   public Date getCreated() {
     return created;
   }
+  
+  public String getAddress(){
+	  return address;
+  }
+  
+  public void setItem(String i){
+	  itemname = i;
+  }
+  
+  
+  public void setPrice(int i){
+	  item_price = i;
+  }
+  public void setOwner(String i){
+	  owner = i;
+  }
+  
+  public void setAddress(String i){
+	  address = i;
+  }
 
   public RequestItem(String owner) {
     this(owner, new Date(java.lang.System.currentTimeMillis()));

@@ -17,7 +17,7 @@ public class RequestsDataSource {
 	private SQLiteDatabase database;
 	private GoGetSQLiteHelper dbHelper;
 	private String[] allColumns = { GoGetSQLiteHelper.COLUMN_ID,
-			GoGetSQLiteHelper.COLUMN_REQUEST };
+			GoGetSQLiteHelper.COLUMN_ITEMNAME,GoGetSQLiteHelper.COLUMN_ITEMPRICE,GoGetSQLiteHelper.COLUMN_OWNER };
 
 	private static final String TAG = "DBDEMO";
 
@@ -34,8 +34,8 @@ public class RequestsDataSource {
 	}
 
 	public Request createRequest(RequestItem ri) {
-		ContentValues values = new ContentValues();
-		values.put(GoGetSQLiteHelper.COLUMN_REQUEST, ri.getItem());
+		ContentValues values = new ContentValues();	
+		values.put(GoGetSQLiteHelper.COLUMN_ITEMNAME, ri.getItem());
 		long insertId = database.insert(GoGetSQLiteHelper.TABLE_REQUESTS, null,
 				values);
 		Cursor cursor = database.query(GoGetSQLiteHelper.TABLE_REQUESTS,

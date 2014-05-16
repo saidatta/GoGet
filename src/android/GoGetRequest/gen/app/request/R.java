@@ -23,27 +23,35 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int addr=0x7f070005;
-        public static final int bExit=0x7f070002;
-        public static final int bNewRequest=0x7f070000;
-        public static final int bViewRequest=0x7f070001;
-        public static final int iname=0x7f070006;
-        public static final int myEditText=0x7f070003;
-        public static final int name=0x7f070004;
-        public static final int price=0x7f070007;
-        public static final int row=0x7f07000a;
-        public static final int rowDate=0x7f070009;
-        public static final int submit=0x7f070008;
+        public static final int addr=0x7f07000a;
+        public static final int bExit=0x7f070007;
+        public static final int bNewRequest=0x7f070005;
+        public static final int bViewRequest=0x7f070006;
+        public static final int iname=0x7f07000b;
+        public static final int myEditText=0x7f070008;
+        public static final int name=0x7f070009;
+        public static final int numberOfRequests=0x7f07000e;
+        public static final int price=0x7f07000c;
+        public static final int row=0x7f070010;
+        public static final int rowDate=0x7f07000f;
+        public static final int spinDiagDept=0x7f070004;
+        public static final int submit=0x7f07000d;
+        public static final int txtDelAddr=0x7f070003;
+        public static final int txtDelName=0x7f070000;
+        public static final int txtDelOwner=0x7f070002;
+        public static final int txtDelPrice=0x7f070001;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
-        public static final int new_item_fragment=0x7f030001;
-        public static final int newreq=0x7f030002;
-        public static final int todolist_item=0x7f030003;
+        public static final int editdialog=0x7f030000;
+        public static final int main=0x7f030001;
+        public static final int new_item_fragment=0x7f030002;
+        public static final int newreq=0x7f030003;
+        public static final int todolist_item=0x7f030004;
     }
     public static final class string {
         public static final int addItemContentDescription=0x7f060002;
         public static final int addItemHint=0x7f060001;
+        public static final int add_request=0x7f06000a;
         public static final int address=0x7f060007;
         public static final int app_name=0x7f060000;
         public static final int btn_createRequest=0x7f060003;
@@ -51,6 +59,7 @@ public final class R {
         public static final int btn_viewRequests=0x7f060005;
         public static final int item_name=0x7f060009;
         public static final int name=0x7f060006;
+        public static final int number_of_requests=0x7f06000b;
         public static final int price=0x7f060008;
     }
 }

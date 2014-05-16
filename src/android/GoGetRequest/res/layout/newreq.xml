@@ -6,7 +6,7 @@
     >	
     <TextView android:layout_width="fill_parent"
     		android:layout_height="wrap_content"
-    		android:text="Name: "/>
+    		android:text="@string/item_name"/>
     <EditText android:id="@+id/name" 
     		android:layout_width="fill_parent"
     		android:layout_height="wrap_content"
@@ -14,7 +14,7 @@
     <TextView  
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
-	    android:text="Address: "
+	    android:text="@string/address"
 	    />
         <EditText android:id="@+id/addr" 
     		android:layout_width="fill_parent"
@@ -24,7 +24,7 @@
         <TextView  
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
-	    android:text="Item name: "
+	    android:text="@string/item_name"
 	    />
         <EditText android:id="@+id/iname" 
     		android:layout_width="fill_parent"
@@ -33,17 +33,24 @@
    	<TextView  
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
-	    android:text="Price: " />
-           <EditText android:id="@+id/price" 
+	    android:text="@string/price"
+          />
+        <EditText android:id="@+id/price" 
     		android:layout_width="fill_parent"
     		android:layout_height="wrap_content"
     		android:layout_marginBottom="10dip"/> 
 
-       
-
-    <Button android:id="@+id/submit"
-     		android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="Submit"
-    		android:layout_marginTop="15dip"/>
+    <Button
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:id="@+id/submit"
+  android:text="@string/add_request"
+  android:onClick="btn_AddRequest_Click"
+  />
+  <TextView
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="@string/number_of_requests"
+  android:id="@+id/numberOfRequests"
+  />
 </LinearLayout>

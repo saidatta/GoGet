@@ -10,5 +10,7 @@
   <string name="address"> Address</string>
   <string name="price"> Price</string>
   <string name="item_name"> Item Name</string>
+  <string name="add_request"> Add Request</string>
+  <string name="number_of_requests"> Number Of Requests</string>
   
 </resources>
