@@ -16,12 +16,23 @@
 	    android:layout_height="wrap_content"
 	    android:text="@string/address"
 	    />
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_vertical">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Address"
+                android:id="@+id/btnAddr" android:layout_gravity="left|center_vertical"
+                android:onClick="btn_GetAddr_Click"/>
         <EditText android:id="@+id/addr"
-    		android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:layout_marginBottom="10dip"/>
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip" android:layout_gravity="left|center_vertical"/>
+    </LinearLayout>
 
-        <TextView
+    <TextView
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:text="@string/item_name"
@@ -32,7 +43,7 @@
     		android:layout_marginBottom="10dip"/>
     <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Store"
               android:id="@+id/textView1" android:singleLine="true"/>
-    <EditText android:id="@+id/store" android:layout_width="fill_parent" android:layout_height="wrap_content"
+    <EditText android:id="@+id/store_name" android:layout_width="fill_parent" android:layout_height="wrap_content"
               android:layout_marginBottom="10dip"/>
     <TextView
 	    android:layout_width="fill_parent"
@@ -45,8 +56,8 @@
     		android:layout_marginBottom="10dip"/>
 
     <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Comments"
-              android:id="@+id/textView"/>
-    <EditText android:id="@+id/comments" android:layout_width="fill_parent" android:layout_height="30dp"
+              android:id="@+id/comments"/>
+    <EditText android:id="@+id/comments" android:layout_width="fill_parent" android:layout_height="80dp"
               android:layout_marginBottom="10dip" android:lines="3"/>
     <Button
   android:layout_width="wrap_content"
@@ -61,8 +72,4 @@
   android:text="@string/number_of_requests"
   android:id="@+id/numberOfRequests"
   />
-    <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/scrollView"/>
 </LinearLayout>
