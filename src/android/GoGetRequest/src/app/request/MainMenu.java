@@ -29,7 +29,8 @@ public class MainMenu extends Activity implements OnClickListener{
 		{ 	Intent i = new Intent(getApplicationContext(), CreateRequest.class);
 			startActivity(i);   } break;
 		case R.id.bViewRequest: 
-		{
+		{Intent i = new Intent(getApplicationContext(), ViewRequest.class);
+		startActivity(i);  
 					
 				}break;
 		case R.id.bExit: finish(); break;

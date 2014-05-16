@@ -19,6 +19,7 @@ public class GoGetSQLiteHelper extends SQLiteOpenHelper {
 	public static final String COLUMN_ITEMNAME = "itemname";
 	public static final String COLUMN_ITEMPRICE = "itemPrice";
 	public static final String COLUMN_OWNER = "owner";
+	public static final String COLUMN_ADDR = "address";
 	private static final String LOGCAT = null;
 
 	private static final String VIEW_REQUEST = "ViewReqs";
@@ -29,7 +30,7 @@ public class GoGetSQLiteHelper extends SQLiteOpenHelper {
 	private static final String DATABASE_CREATE = "CREATE TABLE "
 			+ TABLE_REQUESTS + "(" + COLUMN_ID
 			+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_ITEMNAME
-			+ " TEXT NOT NULL, "+ COLUMN_ITEMPRICE+ " INTEGER, "+ COLUMN_OWNER+" TEXT NOT NULL );";
+			+ " TEXT NOT NULL, "+ COLUMN_ITEMPRICE+ " INTEGER, "+ COLUMN_OWNER+" TEXT NOT NULL, "+COLUMN_ADDR+" TEXT NOT NULL );";
 	
 	public GoGetSQLiteHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -60,6 +61,7 @@ public class GoGetSQLiteHelper extends SQLiteOpenHelper {
 			cv.put(COLUMN_ITEMNAME, ri.getItem());
 			cv.put(COLUMN_ITEMPRICE, ri.getPrice());
 			cv.put(COLUMN_OWNER, ri.getOwner());
+			cv.put(COLUMN_ADDR,ri.getAddress());
 			//cv.put(colDept,2);
 			
 			db.insert(TABLE_REQUESTS, COLUMN_ITEMNAME, cv);
@@ -99,6 +101,14 @@ public class GoGetSQLiteHelper extends SQLiteOpenHelper {
 		 SQLiteDatabase db=this.getWritableDatabase();
 		 db.delete(TABLE_REQUESTS,COLUMN_ID+"=?", new String [] {String.valueOf(ri.getItem())});
 		 db.close();		
+	 }
+     
+      public Cursor getRequestByOwner(String ownr)
+	 {
+		 SQLiteDatabase db=this.getReadableDatabase();
+		 String [] columns=new String[]{"_id",COLUMN_ITEMNAME,COLUMN_ITEMPRICE,COLUMN_OWNER,COLUMN_ADDR};
+		 Cursor c=db.query(VIEW_REQUEST, columns, COLUMN_OWNER+"=?", new String[]{ownr}, null, null, null);
+		 return c;
 	 }
 
 }

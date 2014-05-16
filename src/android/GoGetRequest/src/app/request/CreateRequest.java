@@ -46,7 +46,7 @@ public class CreateRequest extends Activity {
 		{
 		super.onStart();
 		dbHelper=new GoGetSQLiteHelper(this);
-		numberOfRequests.setText(numberOfRequests.getText()+String.valueOf(dbHelper.getRequestsCount()));
+//		numberOfRequests.setText(numberOfRequests.getText()+String.valueOf(dbHelper.getRequestsCount()));
 		}
 		catch(Exception ex)
 		{
@@ -80,9 +80,8 @@ public class CreateRequest extends Activity {
 		{
 			if(ok)
 			{
-				//NotifyEmpAdded();
 				RequestMessages.ShowRequestAddedAlert(this);
-				numberOfRequests.setText("Number of Requests "+String.valueOf(dbHelper.getRequestsCount()));
+			//	numberOfRequests.setText("Number of Requests "+String.valueOf(dbHelper.getRequestsCount()));
 			}
 		}
 	}

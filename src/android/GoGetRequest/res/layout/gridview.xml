@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/tab1"
+    
+    >
+    <TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+  
+    <TableRow>
+    <TextView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:text="Item Name"
+    android:layout_weight="1"
+   
+    
+    
+    />
+    <TextView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:text="Item Price"
+    android:layout_weight="1"
+  
+    
+    />
+    <TextView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:text="Owner"
+    android:layout_weight="1"
+    />
+    
+    </TableRow>
+    </TableLayout>
+    <GridView
+    android:id="@+id/grid"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:numColumns="1"
+	android:stretchMode="columnWidth"
+    />
+    <TextView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:text="Item Price"
+  	android:id="@+id/txtTest"	    
+    />
+    </LinearLayout>
